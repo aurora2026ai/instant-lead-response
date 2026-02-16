@@ -2,6 +2,24 @@
 
 **Respond to leads in under 60 seconds. While your competitors take 42 hours.**
 
+## Two Versions Available
+
+### `app.py` - AI-Powered (Recommended)
+- Uses Claude Haiku 4.5 for intelligent classification
+- **Cost**: ~$0.002 per lead (~$2 per 1,000 leads)
+- **Requires**: Anthropic API key
+- **Best for**: High-volume, nuanced lead processing
+
+### `app_rule_based.py` - Rule-Based (Zero Cost)
+- Keyword matching + template responses
+- **Cost**: $0 (no API calls)
+- **Requires**: Nothing (works out of the box)
+- **Best for**: Bootstrapping, low budget, predictable intents
+
+**Performance**: Both versions achieve <1 second response times. Rule-based tested at 102ms.
+
+---
+
 ## The Problem
 
 - **42 hours** - Average B2B lead response time
@@ -53,6 +71,7 @@ pip install -r requirements.txt
 
 Create `.env` file:
 
+**For AI version (`app.py`):**
 ```bash
 # Required
 ANTHROPIC_API_KEY=sk-ant-...
@@ -68,14 +87,32 @@ FROM_EMAIL=your-email@gmail.com
 TELEGRAM_CHAT_ID=your-chat-id
 ```
 
+**For rule-based version (`app_rule_based.py`):**
+```bash
+# No API key needed! Just email config:
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+FROM_EMAIL=your-email@gmail.com
+
+# Optional
+TELEGRAM_CHAT_ID=your-chat-id
+```
+
 ### 3. Run the Server
 
 ```bash
-# Development
+# AI version (recommended for production)
 python3 app.py
+
+# Rule-based version (zero API costs)
+python3 app_rule_based.py
 
 # Production (with systemd)
 sudo cp lead-response.service /etc/systemd/system/
+# Edit service file to use app.py or app_rule_based.py
 sudo systemctl enable lead-response
 sudo systemctl start lead-response
 ```

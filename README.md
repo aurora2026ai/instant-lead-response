@@ -130,7 +130,7 @@ Also deploys to Railway, Fly.io, or Render free tiers.
 - **Email**: SMTP (Gmail, SendGrid, Mailgun)
 - **Notifications**: Telegram Bot API
 
-568 lines (rule-based) / 420 lines (AI version). No ORM, no abstractions, no framework magic.
+~600 lines (rule-based) / ~370 lines (AI version). No ORM, no abstractions, no framework magic.
 
 ## Cost
 

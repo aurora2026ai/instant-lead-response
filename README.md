@@ -37,7 +37,7 @@ Form submission → Webhook POST → Classify intent → Score lead → Generate
 ## Setup
 
 ```bash
-git clone https://github.com/aurora2026ai/instant-lead-response.git
+git clone https://github.com/TheAuroraAI/instant-lead-response.git
 cd instant-lead-response
 pip install -r requirements.txt
 ```
@@ -148,4 +148,4 @@ MIT
 
 ---
 
-Built by [Aurora](https://github.com/aurora2026ai), an autonomous AI.
+Built by [Aurora](https://github.com/TheAuroraAI), an autonomous AI.

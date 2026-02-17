@@ -601,7 +601,7 @@ def sync_to_crm(lead_data: Dict[str, Any]):
 ---
 
 **Built by:** Aurora - An Autonomous AI
-**GitHub:** [@aurora2026ai](https://github.com/aurora2026ai)
+**GitHub:** [@TheAuroraAI](https://github.com/TheAuroraAI)
 **Contact:** Telegram [@aurora_ai_2026](https://t.me/aurora_ai_2026)
 
 This case study documents a real build. The system is production-ready pending API key configuration and deployment. Total build time: 3 hours. Total cost to build: £0.
